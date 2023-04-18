@@ -10,6 +10,9 @@ const nextConfig = {
     config.plugins.push(new StylelintPlugin());
     return config;
   },
+  images: {
+    domains: ['static.hromadske.radio'],
+  },
 };
 
 module.exports = nextConfig;

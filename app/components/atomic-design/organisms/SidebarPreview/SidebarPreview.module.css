@@ -1,0 +1,36 @@
+/* stylelint-disable no-missing-end-of-source-newline */
+/* stylelint-disable number-leading-zero */
+/* stylelint-disable indentation */
+.title {
+    font-size: 15px;
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+    flex: 1;
+    letter-spacing: unset;
+    transition: .3s ease-out;
+}
+
+.link {
+    color: unset;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+}
+
+.date {
+    font-size: 12px;
+    font-family: Roboto, sans-serif;
+    color: #bbbcbd;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrap {
+    display: flex;
+    color: #000;
+    flex-direction: column;
+    border-bottom: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: 0;
+    transition: .3s ease-out;
+}
