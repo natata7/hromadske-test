@@ -27,6 +27,11 @@
     }
 }
 
+.container {
+    max-width: 1125px;
+    margin: 0 auto;
+}
+
 .player-drop-down-container {
     position: absolute;
     top: 100px;
@@ -1260,6 +1265,8 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    max-width: 1125px;
+    margin: 0 auto;
 }
 
 .headergap {

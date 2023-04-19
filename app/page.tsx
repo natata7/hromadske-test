@@ -1,13 +1,14 @@
-import Head from "next/head";
-import PostPreview from "../app/components/atomic-design/organisms/PostPreview/PostPreview";
+import dynamic from 'next/dynamic'
 import styles from "./Page.module.css";
-import SidebarPreview from "./components/atomic-design/organisms/SidebarPreview/SidebarPreview";
 import Link from "next/link";
 import Image from "next/image";
 import "@/styles/atomic-styles/style.scss";
-import PodcastPreview from "./components/atomic-design/organisms/PodcastPreview/PoscastPreview";
-import YoutubePreview from "./components/atomic-design/organisms/YoutubePreview/YoutubetPreview";
-import Footer from "./components/atomic-design/organisms/Footer/Footer";
+
+const PostPreview = dynamic(() => import('./components/atomic-design/organisms/PostPreview/PostPreview'));
+const SidebarPreview = dynamic(() => import('./components/atomic-design/organisms/SidebarPreview/SidebarPreview'));
+const PodcastPreview = dynamic(() => import('./components/atomic-design/organisms/PodcastPreview/PoscastPreview'));
+const YoutubePreview = dynamic(() => import('./components/atomic-design/organisms/YoutubePreview/YoutubetPreview'));
+const Footer = dynamic(() => import('./components/atomic-design/organisms/Footer/Footer'));
 
 async function getMenus() {
   const res = await fetch("https://api.hromadske.radio/menus");
@@ -64,45 +65,7 @@ async function getUpstream() {
   return res;
 }
 
-//SEO
-export const metadata = {
-  title: "Громадське радіо | Слухайте. думайте.",
-  description:
-    "«Громадське радіо» — незалежна «розмовна» радіостанція, яка надає неупереджену, об’єктивну та достовірну інформацію й аналіз подій в Україні та світі.",
-  keywords: "ds ds",
-  openGraph: {
-    title: 'Громадське радіо | Слухайте. думайте.',
-    description: "«Громадське радіо» — незалежна «розмовна» радіостанція, яка надає неупереджену, об’єктивну та достовірну інформацію й аналіз подій в Україні та світі.",
-    images: "https://hromadske.radio/assets/logo_og.jpeg",
-  },
-  metadataBase: new URL('https://hromadske.radio/'),
-  alternates: {
-    canonical: '/',
-    languages: {
-      'en-US': '/en-US',
-      'uk-UA': '/uk',
-    },
-  },
-  twitter: {
-    title: "Громадське радіо | Слухайте. думайте.",
-    description:
-    "«Громадське радіо» — незалежна «розмовна» радіостанція, яка надає неупереджену, об’єктивну та достовірну інформацію й аналіз подій в Україні та світі.",
-    images: ['https://hromadske.radio/assets/logo_og.jpeg'],
-  },
-  robots: {
-    index: false,
-    follow: true,
-    nocache: true,
-    googleBot: {
-      index: true,
-      follow: false,
-      noimageindex: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+
 
 export default async function Page() {
   const menus = await getMenus();
@@ -118,15 +81,6 @@ export default async function Page() {
 
   return (
     <>
-      <Head>
-        <title>My page title</title>
-        <Link rel="preconnect" href="https://fonts.googleapis.com" />
-        <Link rel="preconnect" href="https://fonts.gstatic.com" />
-        <Link
-          href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
 
       <main>
         <div className={styles.wrap}>
@@ -139,7 +93,9 @@ export default async function Page() {
                 href="https://hromadske.radio/news/2022/07/10/pravozakhysnyk-ta-spivzasnovnyk-hromads-koho-radio-maksym-butkevych-u-poloni-rosiian"
                 target="_blank"
               >
-                <img
+                <Image
+                  width={1125}
+                  height={130}
                   className="lg"
                   src="https://hromadske.radio/assets/b10-images/1125_130.svg"
                 />
