@@ -1,0 +1,497 @@
+/* stylelint-disable scss/double-slash-comment-whitespace-inside */
+/* stylelint-disable no-missing-end-of-source-newline */
+/* stylelint-disable block-closing-brace-empty-line-before */
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable selector-pseudo-element-colon-notation */
+/* stylelint-disable selector-id-pattern */
+/* stylelint-disable rule-empty-line-before */
+/* stylelint-disable declaration-block-no-duplicate-properties */
+/* stylelint-disable length-zero-no-unit */
+/* stylelint-disable indentation */
+.wrap {
+    background: black;
+}
+
+.close-btn {
+    display: none;
+}
+
+.close-burger-area {
+    width: 0px;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.button-wrap {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100px;
+    cursor: pointer;
+
+    .button-wrap {
+        margin-left: 0px;
+    }
+
+    .button {
+        height: 40px;
+        width: 40px;
+        border: 1px solid #22323a;
+        color: @blue-color;
+        font-size: 32px;
+        border-radius: 50%;
+        background: transparent;
+        font-weight: lighter;
+        cursor: pointer;
+    }
+}
+
+.main-burger-area {
+    padding-top: 28px;
+    flex: 1;
+    color: white;
+    margin-left: 100px;
+
+    .a {
+        color: white;
+    }
+
+    .search-area {
+        display: flex;
+        align-items: center;
+        width: 318px;
+
+        img.logo {
+            width: 35px;
+            margin-left: 0px;
+        }
+
+        #searchInput {
+            height: 45px;
+            box-sizing: border-box;
+            border-radius: 23px;
+            font-size: 14px;
+            width: 235px;
+            padding: 0 25px;
+            border: 1px solid #22323a;
+            background: transparent;
+            margin-left: 24px;
+            outline: none;
+        }
+
+        .search-label {
+            width: 0px;
+            height: 10px;
+            position: relative;
+        }
+
+        .search-label:before {
+            /* content: url("../../assets/search.png"); */
+            position: absolute;
+            top: -7px;
+            left: -40px;
+        }
+
+    }
+
+    .top-menu-area {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    .top-menu-area ul {
+        flex-wrap: nowrap;
+    }
+
+    .top-menu-area ul li {
+        font-size: 14px;
+    }
+
+    .top-menu-area ul li a {
+        height: 15px;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .top-menu-area ul li a img {
+        padding-right: 8px;
+    }
+
+}
+
+.top-button-area {
+    width: 227px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-button-area button {
+    height: 45px;
+    background: @orange-color;
+    text-transform: uppercase;
+    color: white;
+    font-size: 13px;
+    box-sizing: border-box;
+    border-radius: 23px;
+    border: none;
+    padding: 0 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.section-header {
+    font-size: 15px;
+    color: #45484c;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.rubric-header {
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #45484c;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.sections {
+    margin-top: 80px;
+    font-size: 35px;
+    width: 484px;
+}
+
+.sections ul li {
+    padding: 13px 0;
+}
+
+.rubrics {
+    margin-top: 80px;
+    font-size: 15px;
+    width: 200px;
+    margin-left: 25px;
+
+    .rubrics li {
+        padding: 6px 0;
+
+    }
+}
+
+.ver-line {
+    margin-top: 80px;
+    width: 1px;
+    height: 283px;
+    background: #282c32;
+}
+
+.hor-line {
+    height: 1px;
+    width: 100%;
+    background: #282c32;
+}
+
+ul.bottom-menu {
+    display: flex;
+    margin-left: -9px;
+    font-size: 14px;
+    margin-bottom: 25px;
+    margin-top: 139px;
+}
+
+ul.bottom-menu li {
+    padding: 0 9px;
+
+}
+
+.footer ul {
+    display: flex;
+    font-size: 14px;
+}
+
+.footer ul li {
+    color: blue;
+}
+
+.footer ul li a {
+    padding: 20px 0;
+    color: blue;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.footer ul li a i {
+    margin-right: 8px;
+    font-size: 17px;
+}
+
+.lang {
+    display: none;
+    width: 100%;
+    padding: 25px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lang button {
+    height: 45px;
+    background: @orange-color;
+    text-transform: uppercase;
+    color: white;
+    font-size: 13px;
+    box-sizing: border-box;
+    border-radius: 23px;
+    border: none;
+    padding: 0 35px;
+    cursor: pointer;
+}
+
+.locales {
+    margin-right: 10px;
+}
+
+.locales a {
+    margin: 0 10px;
+    color: gray;
+}
+
+.active {
+    color: white;
+}
+
+.small-wrap {
+    display: none;
+}
+
+@media screen and (max-width: 1366px) {
+    .wrap {
+        .container {
+            max-width: 1225px;
+
+            .row {
+                position: relative;
+            }
+        }
+    }
+
+    .main-burger-area {
+        margin-left: 100px;
+    }
+
+    .close-burger-area {
+        position: absolute;
+        top: 0;
+        left: 0px;
+        width: 100px;
+
+        .button-wrap {
+            margin-left: 0px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .close-burger-area {
+        width: 100px;
+
+        .button-wrap {
+            margin-left: 0px;
+        }
+    }
+
+    .main-burger-area {
+        max-width: 903px;
+    }
+
+    .search-area {
+        width: 315px !important;
+    }
+
+    .top-menu-area a {
+        padding: 15px 10px !important;
+    }
+
+    .top-button-area {
+        display: none !important;
+    }
+
+    .lang {
+        display: flex;
+    }
+
+    .rubrics {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-burger-area {
+        padding: 12px 15px 0px;
+        max-width: 683px;
+        margin-left: 0px;
+    }
+
+    .close-btn {
+        height: 40px;
+        width: 40px;
+        border: 1px solid #22323a;
+        color: @blue-color;
+        font-size: 32px;
+        border-radius: 50%;
+        background: transparent;
+        font-weight: lighter;
+        display: block !important;
+    }
+
+    .logo {
+        margin-left: 24px !important;
+    }
+
+    .search-area {
+        width: 100% !important;
+    }
+
+    .search-area form {
+        display: none;
+    }
+
+    .search-label,
+    .top-menu-area,
+    .close-burger-area {
+        display: none !important;
+    }
+
+    .sections {
+        margin-top: 40px;
+        flex: 2;
+        width: auto;
+        font-size: 22px !important;
+
+        .section-header {
+            font-size: 10px;
+        }
+    }
+
+    .ver-line {
+        margin-top: 40px;
+        box-sizing: border-box;
+        border-bottom: 50px solid black;
+    }
+
+    .rubrics {
+        flex: 1;
+        margin-top: 40px;
+        margin-left: 25px;
+
+        .rubric-header {
+            font-size: 10px;
+        }
+    }
+
+    .rubrics ul li {
+        margin-right: 15px;
+
+    }
+
+    .small-wrap {
+        display: block;
+        width: 100%;
+    }
+
+    .small-wrap ul {
+        padding: 15px 0;
+        flex-direction: column;
+        font-size: 12px;
+    }
+
+    .small-wrap ul li {
+        padding: 10px 0;
+    }
+
+    .small-wrap ul li a {
+        align-items: center;
+        display: flex;
+    }
+
+    .small-wrap ul li img {
+        padding-right: 8px;
+    }
+
+    ul.bottom-menu {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+    }
+
+    ul.bottom-menu li {
+        font-size: 12px;
+        margin: 10px 0;
+    }
+
+    .footer ul {
+        flex-wrap: wrap;
+    }
+
+    .footer li a {
+        font-size: 12px;
+        padding: 10px 0;
+
+    }
+
+    .lang {
+        flex-wrap: wrap;
+
+        .locales {
+            padding-top: 40px;
+            width: 100%;
+            font-size: 13px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sections {
+        margin-top: 40px;
+        width: 100%;
+        flex: none;
+        font-size: 22px !important;
+
+        .section-header {
+            font-size: 10px;
+        }
+    }
+
+    .ver-line {
+        display: none;
+    }
+
+    .rubrics {
+        width: 100%;
+        margin-top: 40px;
+        margin-left: 0;
+        flex: none;
+
+        .rubric-header {
+            font-size: 10px;
+        }
+    }
+
+    .rubrics ul {
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    .rubrics ul li {
+        padding: 10px 0;
+        margin-right: 15px;
+    }
+}

@@ -7,9 +7,12 @@ export default function PostPreview({
   title,
   coverImage,
   date,
-  excerpt,
-  author,
   slug,
+}: {
+  title: string;
+  coverImage: string;
+  date: string;
+  slug: string;
 }) {
   return (
     <article className={styles.article}>

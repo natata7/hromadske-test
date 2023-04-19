@@ -11,7 +11,7 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: ['static.hromadske.radio'],
+    domains: ['static.hromadske.radio', 'img.youtube.com'],
   },
 };
 
