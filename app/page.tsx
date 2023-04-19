@@ -97,6 +97,7 @@ export default async function Page() {
                   width={1125}
                   height={130}
                   className="lg"
+                  alt='header banner'
                   src="https://hromadske.radio/assets/b10-images/1125_130.svg"
                 />
               </a>
