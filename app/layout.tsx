@@ -1,3 +1,4 @@
+import { ReactElement, ReactNode } from "react";
 
 export default function RootLayout({
   children,
