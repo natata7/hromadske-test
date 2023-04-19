@@ -1,14 +1,27 @@
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 import styles from "./Page.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import "@/styles/atomic-styles/style.scss";
 
-const PostPreview = dynamic(() => import('./components/atomic-design/organisms/PostPreview/PostPreview'));
-const SidebarPreview = dynamic(() => import('./components/atomic-design/organisms/SidebarPreview/SidebarPreview'));
-const PodcastPreview = dynamic(() => import('./components/atomic-design/organisms/PodcastPreview/PoscastPreview'));
-const YoutubePreview = dynamic(() => import('./components/atomic-design/organisms/YoutubePreview/YoutubetPreview'));
-const Footer = dynamic(() => import('./components/atomic-design/organisms/Footer/Footer'));
+const PostPreview = dynamic(
+  () => import("./components/atomic-design/organisms/PostPreview/PostPreview")
+);
+const SidebarPreview = dynamic(
+  () =>
+    import("./components/atomic-design/organisms/SidebarPreview/SidebarPreview")
+);
+const PodcastPreview = dynamic(
+  () =>
+    import("./components/atomic-design/organisms/PodcastPreview/PoscastPreview")
+);
+const YoutubePreview = dynamic(
+  () =>
+    import("./components/atomic-design/organisms/YoutubePreview/YoutubePreview")
+);
+const Footer = dynamic(
+  () => import("./components/atomic-design/organisms/Footer/Footer")
+);
 
 async function getMenus() {
   const res = await fetch("https://api.hromadske.radio/menus");
@@ -65,8 +78,6 @@ async function getUpstream() {
   return res;
 }
 
-
-
 export default async function Page() {
   const menus = await getMenus();
   const banners = await getBanners();
@@ -81,7 +92,6 @@ export default async function Page() {
 
   return (
     <>
-
       <main>
         <div className={styles.wrap}>
           <div className={styles.burgerContainer}>{/* <Burger /> */}</div>
@@ -97,7 +107,7 @@ export default async function Page() {
                   width={1125}
                   height={130}
                   className="lg"
-                  alt='header banner'
+                  alt="header banner"
                   src="https://hromadske.radio/assets/b10-images/1125_130.svg"
                 />
               </a>
