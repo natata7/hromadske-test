@@ -7,6 +7,10 @@ export default function PostPreview({
   title,
   date,
   slug,
+}: {
+  title: string;
+  date: string;
+  slug: string;
 }) {
   return (
     <article className={styles.article}>

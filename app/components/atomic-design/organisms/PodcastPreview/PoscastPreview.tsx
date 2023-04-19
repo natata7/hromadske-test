@@ -8,6 +8,11 @@ export default function PodcastPreview({
   coverImage,
   date,
   slug,
+}: {
+  title: string;
+  coverImage: string;
+  date: string;
+  slug: string;
 }) {
   return (
     <article className={styles.article}>
